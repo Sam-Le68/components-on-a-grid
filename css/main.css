@@ -18,25 +18,30 @@ header {
   /* Remove the <header> box and allow us to directly apply header’s children to the grid. */
   display: contents;
   position: relative;
+  overflow: hidden;
 }
 
 h1 {
   position: absolute;
-  bottom: 1rem;
+  bottom: 3rem;
   left: 1rem;
-  max-width: 5rem;
+  width: 25%;
+
 }
 
 nav {
   position: absolute;
   top: 1rem;
   right: 1rem;
+  width: 60%;
+  font-size: 2rem;
+  font-family: "Patua One", sans-serif;
 }
 
 ul {
   list-style-type: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 a {

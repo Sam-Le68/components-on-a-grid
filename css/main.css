@@ -14,6 +14,11 @@ img {
   width: 100%;
 }
 
+body {
+  background-color: #f2f1ed;
+  margin: .5rem;
+}
+
 header {
   /* Remove the <header> box and allow us to directly apply header’s children to the grid. */
   display: contents;
@@ -60,10 +65,19 @@ p {
 
 main {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "box1 box2";
   gap: 1rem;
 }
 
-figure {
+figure:first-child {
   margin: 1rem 0;
+  grid-area: box1;
+  margin-top: .5rem;
+}
+
+figure:last-child {
+  margin: 1rem 0;
+  grid-area: box2;
+  margin-top: .5rem;
 }

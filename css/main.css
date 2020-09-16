@@ -1,5 +1,7 @@
 html {
   box-sizing: border-box;
+  font-family: Georgia, serif;
+  line-height: 1.5;
 }
 
 *,
@@ -15,4 +17,28 @@ img {
 header {
   /* Remove the <header> box and allow us to directly apply header’s children to the grid. */
   display: contents;
+  position: relative;
+}
+
+h1 {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  max-width: 5rem;
+}
+
+nav {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  color: #fff;
 }

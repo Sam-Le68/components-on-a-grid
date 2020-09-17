@@ -16,7 +16,7 @@ img {
 
 body {
   background-color: #f2f1ed;
-  margin: .5rem;
+  margin: 0;
 }
 
 header {
@@ -28,16 +28,16 @@ header {
 
 h1 {
   position: absolute;
-  bottom: 3rem;
+  bottom: 7rem;
   left: 1rem;
   width: 25%;
 }
 
 nav {
   position: absolute;
-  top: 1rem;
+  top: 0;
   right: 1rem;
-  width: 60%;
+  width: 50%;
   font-size: 2rem;
   font-family: "Patua One", sans-serif;
 }
@@ -46,6 +46,7 @@ ul {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
+  margin-top: 1.5rem;
 }
 
 a {
@@ -65,19 +66,22 @@ p {
 
 main {
   display: grid;
-  grid-template-areas:
-    "box1 box2";
+  grid-template-areas: "box1 box2" ;
   gap: 1rem;
 }
 
 figure:first-child {
-  margin: 1rem 0;
+  margin: 0;
   grid-area: box1;
-  margin-top: .5rem;
 }
 
 figure:last-child {
-  margin: 1rem 0;
+  margin: 0;
   grid-area: box2;
-  margin-top: .5rem;
+}
+
+figure {
+  display: flex;
+  flex-wrap: wrap;
+
 }

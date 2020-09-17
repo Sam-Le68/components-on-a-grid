@@ -1,7 +1,17 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
 html {
   box-sizing: border-box;
   font-family: Georgia, serif;
   line-height: 1.5;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 *,
@@ -17,36 +27,50 @@ img {
 body {
   background-color: #f2f1ed;
   margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "banner banner"
+    "card1 card2";
+  padding: 1rem;
 }
 
 header {
   /* Remove the <header> box and allow us to directly apply header’s children to the grid. */
   display: contents;
-  position: relative;
-  overflow: hidden;
 }
 
-h1 {
-  position: absolute;
-  bottom: 7rem;
-  left: 1rem;
-  width: 25%;
+main {
+  display: contents;
+}
+
+.logo {
+  width: 14rem;
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
+  order: 1;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pano {
+  grid-area: banner;
 }
 
 nav {
-  position: absolute;
-  top: 0;
-  right: 1rem;
-  width: 50%;
   font-size: 2rem;
   font-family: "Patua One", sans-serif;
+  grid-column: 2/-1;
+  grid-row: 1;
 }
 
 ul {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
-  margin-top: 1.5rem;
+  margin: 0
 }
 
 a {
@@ -65,17 +89,15 @@ p {
 }
 
 main {
-  display: grid;
-  grid-template-areas: "box1 box2";
-  gap: 1rem;
+  display: contents;
 }
 
 figure:first-child {
   margin: 0;
-  grid-area: box1;
+  grid-area: card1;
 }
 
 figure:last-child {
   margin: 0;
-  grid-area: box2;
+  grid-area: card2;
 }

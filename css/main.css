@@ -66,7 +66,7 @@ p {
 
 main {
   display: grid;
-  grid-template-areas: "box1 box2" ;
+  grid-template-areas: "box1 box2";
   gap: 1rem;
 }
 
@@ -78,10 +78,4 @@ figure:first-child {
 figure:last-child {
   margin: 0;
   grid-area: box2;
-}
-
-figure {
-  display: flex;
-  flex-wrap: wrap;
-
 }
